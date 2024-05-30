@@ -22,6 +22,7 @@ Add screenshots or block diagrams here to illustrate how the LP models are const
 ### Steps
 1. Clone the repository:
    ```bash
+   git clone https://eng-git.canterbury.ac.nz/yzh365/flowporject.git
    git clone https://github.com/yangzhangnz/COSC364-24S1-FlowControl.git
    cd path_to_the_cloned_repo
    ```
