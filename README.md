@@ -2,72 +2,65 @@
 
 # Linear Programming Solver
 
-This project contains a Python script that generates linear programming (LP) models and uses IBM's ILOG CPLEX Optimizer to solve them. The script is designed to model a transportation problem where the objective is to minimize the maximum load across various transit nodes while meeting specific demand constraints.
+## Description
+This project contains a Python script that generates and solves linear programming (LP) models using IBM's ILOG CPLEX Optimizer. It is designed to tackle transportation problems where the objective is to minimize the maximum load across various transit nodes while ensuring specific demand constraints are met.
 
-## Features
+## Badges
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Language](https://img.shields.io/badge/language-Python-blue)
+![Platform](https://img.shields.io/badge/platform-CPLEX%20Optimizer-lightgrey)
 
-- **Automated LP File Creation:** Generates an LP file based on the input parameters specifying the network's dimensions.
-- **CPLEX Integration:** Utilizes CPLEX to solve the LP model and prints the output directly from the command line.
-- **Customizable Parameters:** Allows for dynamic adjustment of the number of sources (X), transit nodes (Y), and destinations (Z).
+## Visuals
+Add screenshots or block diagrams here to illustrate how the LP models are constructed or a sample output from CPLEX.
 
-## Requirements
+## Installation
 
+### Prerequisites
 - Python 3.x
-- IBM ILOG CPLEX Optimization Studio (Ensure that CPLEX is accessible via command line)
+- IBM ILOG CPLEX Optimization Studio (ensure CPLEX is in your system's PATH or the script is adjusted to the executable's path).
 
-## Setup and Installation
-
-1. **Clone the Repository:**
+### Steps
+1. Clone the repository:
    ```bash
-   git clone https://yourrepositorylink.com
+   git clone https://github.com/yangzhangnz/COSC364-24S1-FlowControl.git
    cd path_to_the_cloned_repo
    ```
-
-2. **Install CPLEX:**
-   - Follow IBM's official guide to install CPLEX Optimization Studio and ensure it is configured to run from the command line.
-   - Ensure the CPLEX executable is in your system's PATH or adjust the script to include the direct path to the CPLEX executable.
-
-3. **Environment Setup:**
-   - It is recommended to use a virtual environment:
-     ```bash
-     python -m venv myenv
-     source myenv/bin/activate  # On Windows use `myenv\Scripts\activate`
-     ```
+2. (Optional) Set up a Python virtual environment:
+   ```bash
+   python -m venv myenv
+   source myenv/bin/activate  # On Windows use `myenv\Scripts\activate`
+   ```
 
 ## Usage
-
-To use the script, navigate to the project directory and run:
-
+Run the script with:
 ```bash
 python generate_lp.py X Y Z filename.lp
 ```
-
-Where:
-- **X** is the number of source nodes.
-- **Y** is the number of transit nodes.
-- **Z** is the number of destination nodes.
-- **filename.lp** is the name of the file to which the LP model will be written.
+Where X, Y, and Z are integers that represent the dimensions of the network model, and `filename.lp` is the target file for the LP model.
 
 ### Example
-
 ```bash
 python generate_lp.py 7 3 7 example.lp
 ```
+This command generates an LP file named `example.lp` based on the specified parameters and solves it using CPLEX.
 
-This command will generate an LP file named `example.lp` based on the specified dimensions and solve it using CPLEX, printing the runtime and solution output.
+## Support
+For support, please open an issue in the repository or contact [yangzhangnz92@gmail.com](mailto:yangzhangnz92@gmail.com).
 
-## Output
-
-The script prints two main types of outputs:
-- **CPLEX Runtime**: Information about how long CPLEX took to solve the problem.
-- **CPLEX Output**: The solution output from CPLEX, including the values of decision variables and the objective function.
+## Roadmap
+- Add functionality for multi-objective optimization.
+- Improve user interface for parameter input.
 
 ## Contributing
+Contributions are welcome! Please fork the repository and submit pull requests to contribute.
 
-Contributions to this project are welcome. Please fork the repository, make your changes, and submit a pull request.
+## Authors and Acknowledgment
+Yang ZHANG
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Project Status
+The project is currently in a stable release state. Ongoing support and additional features are planned for future releases.
 
 ---
