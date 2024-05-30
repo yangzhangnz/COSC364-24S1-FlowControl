@@ -58,9 +58,6 @@ Contributions are welcome! Please fork the repository and submit pull requests t
 ## Authors and Acknowledgment
 Yang ZHANG
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Project Status
 The project is currently in a stable release state. Ongoing support and additional features are planned for future releases.
 
